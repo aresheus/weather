@@ -79,7 +79,7 @@ const fetchWeatherData = async (city) => {
       aqi: "no",
       alerts: "no",
     };
-    const url = `http://api.weatherapi.com/v1/forecast.json?key=${apiSettings.apiKey}&q=${city}&days=${apiSettings.days}&aqi=${apiSettings.aqi}&alerts=${apiSettings.alerts}`;
+    const url = `https://api.weatherapi.com/v1/forecast.json?key=${apiSettings.apiKey}&q=${city}&days=${apiSettings.days}&aqi=${apiSettings.aqi}&alerts=${apiSettings.alerts}`;
     const resposne = await fetch(url, { method: "GET" });
 
     if (!resposne.ok) throw new Error("weather data not found");
@@ -94,7 +94,7 @@ const fetchWeatherData = async (city) => {
 
 const fetchCountryDetails = async (name) => {
   try {
-    const url = `http://restcountries.com/v3.1/name/${name}`;
+    const url = `https://restcountries.com/v3.1/name/${name}`;
     const resposne = await fetch(url, { method: "GET" });
 
     if (!resposne.ok) throw new Error("country detail not found");
@@ -112,7 +112,7 @@ const fetchAutoComplete = async (cityName) => {
     const apiSettings = {
       apiKey: "aa8e563533ad4d4ea5b140044240405",
     };
-    const url = `http://api.weatherapi.com/v1/search.json?key=${apiSettings.apiKey}&q=${cityName}`;
+    const url = `https://api.weatherapi.com/v1/search.json?key=${apiSettings.apiKey}&q=${cityName}`;
 
     const resposne = await fetch(url, { method: "GET" });
 
