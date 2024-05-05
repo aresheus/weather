@@ -94,7 +94,7 @@ const fetchWeatherData = async (city) => {
 
 const fetchCountryDetails = async (name) => {
   try {
-    const url = `https://restcountries.com/v3.1/name/${name}`;
+    const url = `http://restcountries.com/v3.1/name/${name}`;
     const resposne = await fetch(url, { method: "GET" });
 
     if (!resposne.ok) throw new Error("country detail not found");
