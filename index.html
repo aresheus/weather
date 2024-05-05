@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>airopheus</title>
+    <link
+      rel="shortcut icon"
+      href="https://uxwing.com/wp-content/themes/uxwing/download/weather/weather-icon.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
+      integrity="sha512-OQDNdI5rpnZ0BRhhJc+btbbtnxaj+LdQFeh0V9/igiEPDiWE2fG+ZsXl0JEH+bjXKPJ3zcXqNyP4/F/NegVdZg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="src/css/reset.css" />
+    <link rel="stylesheet" href="src/css/style.css" />
+  </head>
+  <body>
+    <!-- ================> HOME <================ -->
+
+    <section class="home">
+      <!-- ================> AREA <================ -->
+
+      <article class="area">
+        <input type="text" placeholder="Search for cities" class="inputText" />
+        <div class="autocomppleteArea"></div>
+        <i class="ri-search-line searchIcon"></i>
+      </article>
+
+      <!-- ================> AREA 1 <================ -->
+
+      <article class="area1">
+        <div class="loading"></div>
+        <div class="area1Header card hide">
+          <h1 class="countryCode"></h1>
+          <figure class="flag">
+            <img src="" alt="" class="flagImg" />
+          </figure>
+          <figure class="arm">
+            <img src="" alt="" class="armsImg" />
+          </figure>
+
+          <div class="map">
+            <a href="" target="_blank" class="mapLink">
+              <i class="ri-map-pin-line"></i> <br />
+              Show on map
+            </a>
+          </div>
+        </div>
+
+        <figure class="logo">
+          <img
+            src="https://uxwing.com/wp-content/themes/uxwing/download/weather/weather-icon.png"
+            alt=""
+          />
+        </figure>
+      </article>
+
+      <!-- ================> AREA 2 <================ -->
+
+      <article class="area2">
+        <div class="notFound hide">
+          <img src="src/images/notFound.png" alt="notFound" />
+        </div>
+        <div class="loading"></div>
+        <div class="area1TitleBox card hide">
+          <div class="area1TitleHeader">
+            <h1 class="cityName"></h1>
+            <p class="weatherSituation"></p>
+          </div>
+          <h2 class="temp"></h2>
+        </div>
+
+        <figure class="card hide">
+          <img src="" alt="" class="weatherIcon" />
+        </figure>
+      </article>
+
+      <!-- ================> AREA 3 <================ -->
+
+      <article class="area3">
+        <div class="notFound hide">
+          <img src="src/images/notFound.png" alt="notFound" />
+        </div>
+        <div class="loading"></div>
+        <div class="area3TitleArea card hide">
+          <h1>Todays forecast</h1>
+        </div>
+
+        <div class="area3ForecastArea card hide">
+          <div class="hour hour1">
+            <h2></h2>
+            <figure>
+              <img src="" alt="" />
+            </figure>
+            <h1></h1>
+          </div>
+          <div class="hour hour2">
+            <h2></h2>
+            <figure>
+              <img src="" alt="" />
+            </figure>
+            <h1></h1>
+          </div>
+          <div class="hour hour3">
+            <h2></h2>
+            <figure>
+              <img src="" alt="" />
+            </figure>
+            <h1></h1>
+          </div>
+          <div class="hour hour4">
+            <h2></h2>
+            <figure>
+              <img src="" alt="" />
+            </figure>
+            <h1></h1>
+          </div>
+          <div class="hour hour5">
+            <h2></h2>
+            <figure>
+              <img src="" alt="" />
+            </figure>
+            <h1></h1>
+          </div>
+          <div class="hour hour6">
+            <h2></h2>
+            <figure>
+              <img src="" alt="" />
+            </figure>
+            <h1></h1>
+          </div>
+        </div>
+      </article>
+
+      <!-- ================> AREA 4 <================ -->
+
+      <article class="area4">
+        <div class="notFound hide">
+          <img src="src/images/notFound.png" alt="notFound" />
+        </div>
+        <div class="loading"></div>
+        <div class="area4TitleArea card hide">
+          <h1>AIR CONDITIONS</h1>
+        </div>
+        <div class="area4InfoArea card hide">
+          <div class="inf inf1">
+            <div class="infHeader">
+              <i class="ri-temp-cold-line"></i>
+              <h1>Feels like</h1>
+            </div>
+            <h1 class="feelsLike"></h1>
+          </div>
+          <div class="inf inf2">
+            <div class="infHeader">
+              <i class="ri-water-percent-line"></i>
+              <h1>Humidity</h1>
+            </div>
+            <h1 class="humidity"></h1>
+          </div>
+          <div class="inf inf3">
+            <div class="infHeader">
+              <i class="ri-windy-line"></i>
+              <h1>Wind</h1>
+            </div>
+            <h1 class="wind"></h1>
+          </div>
+          <div class="inf inf4">
+            <div class="infHeader">
+              <i class="ri-sun-line"></i>
+              <h1>UV index</h1>
+            </div>
+            <h1 class="uvIndex"></h1>
+          </div>
+        </div>
+      </article>
+
+      <!-- ================> AREA 5 <================ -->
+
+      <article class="area5">
+        <div class="notFound hide">
+          <img src="src/images/notFound.png" alt="notFound" />
+        </div>
+        <div class="loading"></div>
+        <div class="area5TitleArea card hide">
+          <h1>7 Days Forecast</h1>
+        </div>
+        <div class="area5ForecastArea card hide">
+          <div class="day day1">
+            <h1></h1>
+            <div class="middlePart">
+              <figure>
+                <img src="" alt="" />
+              </figure>
+              <h1></h1>
+            </div>
+            <p></p>
+          </div>
+
+          <div class="day day2">
+            <h1></h1>
+            <div class="middlePart">
+              <figure>
+                <img src="" alt="" />
+              </figure>
+              <h1></h1>
+            </div>
+            <p></p>
+          </div>
+
+          <div class="day day3">
+            <h1></h1>
+            <div class="middlePart">
+              <figure>
+                <img src="" alt="" />
+              </figure>
+              <h1></h1>
+            </div>
+            <p></p>
+          </div>
+
+          <div class="day day4">
+            <h1></h1>
+            <div class="middlePart">
+              <figure>
+                <img src="" alt="" />
+              </figure>
+              <h1></h1>
+            </div>
+            <p></p>
+          </div>
+
+          <div class="day day5">
+            <h1></h1>
+            <div class="middlePart">
+              <figure>
+                <img src="" alt="" />
+              </figure>
+              <h1></h1>
+            </div>
+            <p></p>
+          </div>
+
+          <div class="day day6">
+            <h1>Today</h1>
+            <div class="middlePart">
+              <figure>
+                <img src="" alt="" />
+              </figure>
+              <h1></h1>
+            </div>
+            <p></p>
+          </div>
+
+          <div class="day day7">
+            <h1></h1>
+            <div class="middlePart">
+              <figure>
+                <img src="" alt="" />
+              </figure>
+              <h1></h1>
+            </div>
+            <p></p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ================> SCRIPTS <================ -->
+
+    <script src="src/js/script.js"></script>
+  </body>
+</html>
