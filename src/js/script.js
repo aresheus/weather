@@ -60,17 +60,6 @@ const cardsDisplay = (command) => {
 
 /* ====================> FUNCTIONS FOR FETCHING DATA <==================== */
 
-const callAllFetchFunctions = async (city) => {
-  try {
-    const weatherData = await fetchWeatherData(city);
-    const countryData = await fetchCountryDetails(weatherData.location.country);
-
-    return { weatherData, countryData };
-  } catch (error) {
-    // do something
-  }
-};
-
 const fetchWeatherData = async (city) => {
   try {
     const apiSettings = {
@@ -87,21 +76,6 @@ const fetchWeatherData = async (city) => {
     const weatherData = await resposne.json();
 
     return weatherData;
-  } catch (error) {
-    // do something
-  }
-};
-
-const fetchCountryDetails = async (name) => {
-  try {
-    const url = `https://restcountries.com/v3.1/name/${name}`;
-    const resposne = await fetch(url, { method: "GET" });
-
-    if (!resposne.ok) throw new Error("country detail not found");
-
-    const data = await resposne.json();
-
-    return data;
   } catch (error) {
     // do something
   }
@@ -129,10 +103,10 @@ const startFetch = async (city) => {
   cardsDisplay(false);
   loadingDisplay(true);
 
-  await callAllFetchFunctions(city)
+  await fetchWeatherData(city)
     .then((data) => {
-      weatherData(data.weatherData);
-      countryDetails(data.countryData);
+      console.log(data);
+      weatherData(data);
 
       cardsDisplay(true);
     })
@@ -148,7 +122,7 @@ const startFetch = async (city) => {
 /* ====================> HANDLE FETCHING DATAS <==================== */
 
 const weatherData = (data) => {
-  cityName.textContent = data.location.name;
+  cityName.textContent = `${data.location.name} (${data.location.country})`;
   weatherSituation.textContent = data.current.condition.text;
   temp.textContent = `${Math.round(data.current.temp_c)}°C`;
   weatherIcon.src = data.current.condition.icon;
@@ -183,14 +157,6 @@ const weatherData = (data) => {
       Math.round(data.forecast.forecastday[index].day.avgtemp_c) + "°C";
   });
 
-  cardsDisplay(true);
-};
-
-const countryDetails = (data) => {
-  countryCode.textContent = data[0].cca2;
-  flagImg.src = data[0].flags.svg;
-  armsImg.src = data[0].coatOfArms.svg;
-  mapLink.href = data[0].maps.googleMaps;
   cardsDisplay(true);
 };
 

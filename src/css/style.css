@@ -172,56 +172,11 @@
   width: 100%;
 }
 
-.area1 .area1Header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-}
-
 .area1 h1 {
   font-size: 1.5rem;
   color: var(--text-color);
 }
-.area1 .flag {
-  height: auto;
-  width: 4em;
-}
 
-.area1 .flag img {
-  height: 100%;
-  width: 100%;
-}
-
-.area1 .arm {
-  height: auto;
-  width: 4rem;
-}
-
-.area1 .arm img {
-  height: 100%;
-  width: 100%;
-}
-
-.area1 .map {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 0.5rem;
-  color: var(--text2-color);
-}
-
-.area1 .map i {
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-.area1 .map a {
-  font-size: 1rem;
-  color: var(--text2-color);
-  text-align: center;
-}
 /* ==================> AREA 2 <================== */
 
 .area2 {
