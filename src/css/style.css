@@ -514,21 +514,7 @@
     gap: 2rem;
   }
 
-  .area1 .flag {
-    height: auto;
-    width: 4em;
-    order: -1;
-  }
-  .area1 .arm {
-    height: auto;
-    width: 4rem;
-  }
-  .area1 .logo {
-    display: none;
-  }
-  .area1 .map {
-    display: none;
-  }
+ 
 
   /* ==================> AREA 2 <================== */
 
